@@ -1,0 +1,23 @@
+info:
+  component: Micro-services Project Edge Server
+  
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+zuul:
+    ignoredServices: "*"
+    routes:
+        service1: /service1/**
+        service2: /service2/**
+server:
+  port: 8765
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG

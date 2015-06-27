@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: Micro-services Demo Cloud Configuration Server
+      

@@ -1,0 +1,19 @@
+spring:
+    application:
+        name: Micro-services Project Eureka Client
+
+#server:
+#  port: ${PORT:8761}
+
+eureka:
+    instance:
+        metadataMap:
+            instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+endpoints:
+    restart:
+        enabled: true
+    shutdown:
+        enabled: true
+    health:
+        sensitive: false
